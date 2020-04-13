@@ -1,10 +1,10 @@
-    @extends('principal')
-    @section('contenido')
+@extends('principal')
+@section('contenido')
 
     @if(Auth::check())
             @if (Auth::user()->idrol == 1)
             <template v-if="menu==0">
-                <h1>Escritorio</h1>
+                <dashboard></dashboard>
             </template>
 
             <template v-if="menu==1">
@@ -55,6 +55,10 @@
                 <h1>Acerca de</h1>
             </template>
             @elseif (Auth::user()->idrol == 2)
+            <template v-if="menu==0">
+                <dashboard></dashboard>
+            </template>
+            
             <template v-if="menu==5">
                 <venta></venta>
             </template>
@@ -74,6 +78,10 @@
                 <h1>Acerca de</h1>
             </template>
             @elseif (Auth::user()->idrol == 3)
+            <template v-if="menu==0">
+                <dashboard></dashboard>
+            </template>
+
             <template v-if="menu==1">
                 <categoria></categoria>
             </template>
@@ -112,4 +120,4 @@
           <span><a href="http://www.incanatoit.com/">Unidormate</a> &copy; 2020</span>
           <span class="ml-auto">Desarrollado por <a href="#">JamesGiraldo</a></span>
       </footer>
-    @endsection
+@endsection
