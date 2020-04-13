@@ -2,15 +2,15 @@
     <main>        
         <div class="notifications">           
             <i class="fa fa-bell"></i>
-            <span class="badge badge-pill badge-danger num">{{notifications.length}}</span>    
+            <span class="num">{{notifications.length}}</span>    
             <ul class="UL">  
                 <div class="" v-if="notifications.length">
                     <li v-for="item in listar" :key="item.id">
-                        <a class="LI" href="#">   
+                        <a style="text-decoration:none;" class="LI" href="#">   
                             <span class="icon"> {{item.ingresos.numero}} </span>                 
                             <span class="text"> Ingresos {{item.ingresos.mjs}} </span>
                         </a>
-                            <a class="LI" href="#">   
+                        <a style="text-decoration:none;" class="LI" href="#">   
                             <span syle="color: red;" class="icon"> {{item.ventas.numero}} </span>                 
                             <span class="text"> Ventas {{item.ventas.mjs}} </span>
                         </a>
@@ -24,7 +24,7 @@
                     </li>
                 </div>
             </ul>
-        </div>                   
+        </div>                      
     </main>      
 </template>
 <script>
@@ -61,11 +61,13 @@ export default {
     .notifications{
         background: #fff;
         text-align: center;
-        border-radius: 30px;
+        border-radius: 5px;
         box-sizing: border-box;            
         height: 45px;
         text-align: center;
         box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        padding: 2px;
+        padding-bottom: 2px;
     }
     .notifications:hover
     {
@@ -86,30 +88,30 @@ export default {
         line-height: 50px;
         font-size: 30px
     }
-    .notifications:hover .num{
-        position: relative;
-        background: transparent;
-        color: #fff;
-        font-size: 24px;
-        top: -4px;
-
-    }
-    .notifications:hover .num:after{
-        content: ' Notificatones';
-    }
-    .notifications .num{
+  .notifications .num
+    {
         position: absolute;
         top: 0;
-        right: -5px;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
+        right: 169px;
+        width: 17px;
+        height: 25px;
+        border-radius: 30%;
         background: #ff2c74;
         color: #fff;
         line-height: 25px;
         font-family: sans-serif;
         text-align: center;
-    }      
+    }   
+    .notifications:hover .num{
+        position: static;
+        background: transparent;
+        color: #fff;
+        font-size: 24px;
+        top: -4px;
+    }
+    .notifications:hover .num:after{
+        content: ' Eventos';
+    }        
     .UL{
         position: absolute;
         left: 0;
@@ -162,5 +164,8 @@ export default {
     }
     li{
         list-style: none;
+    }
+    a{
+        text-decoration: none;
     }
 </style>  

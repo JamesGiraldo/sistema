@@ -13201,7 +13201,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.notifications{\n    background: #fff;\n    text-align: center;\n    border-radius: 30px;\n    box-sizing: border-box;            \n    height: 45px;\n    text-align: center;\n    box-shadow: 0 2px 5px rgba(0,0,0,.2);\n}\n.notifications:hover\n{\n    width: 250px;\n    height: 50px;\n    text-align: left;\n    padding: 0 15px;\n    background: #ff2c74;\n    transform: translateY(0%);\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.notifications:hover .fa{\n    color: #fff;\n}\n.notifications .fa{\n    color: #cecece;\n    line-height: 50px;\n    font-size: 30px\n}\n.notifications:hover .num{\n    position: relative;\n    background: transparent;\n    color: #fff;\n    font-size: 24px;\n    top: -4px;\n}\n.notifications:hover .num:after{\n    content: ' Notificatones';\n}\n.notifications .num{\n    position: absolute;\n    top: 0;\n    right: -5px;\n    width: 5px;\n    height: 5px;\n    border-radius: 50%;\n    background: #ff2c74;\n    color: #fff;\n    line-height: 25px;\n    font-family: sans-serif;\n    text-align: center;\n}\n.UL{\n    position: absolute;\n    left: 0;\n    top: 50px;\n    margin: 0;\n    width: 100%;\n    background: #fff;\n    box-shadow: 0 5px 15px rgba(0,0,0,.5);\n    padding: 20px;\n    box-sizing: border-box;\n    border-bottom-left-radius: 30px;\n    border-bottom-right-radius: 30px;\n    display: none;\n}\n.notifications:hover .UL{\n    display: block;\n}\n.UL .LI{\n    list-style: none;\n    border-bottom: 1px solid rgba(0,0,0,.1);\n    padding: 20px 0;\n    display: flex;\n}\n.UL .LI:last-child{\n    border-bottom: none;\n}\n.UL .LI .icon{\n    width: 24px;\n    height: 24px;\n    background: #ccc;\n    border-radius: 50%;\n    text-align: center;\n    line-height: 24px;   \n    margin-right: 15px;\n}\n.UL .LI .fa{\n    color: #fff;\n    font-size: 16px;\n    line-height: 24px;\n}\n.Ul .LI .text{\n    position: relative;\n    font-family: sans-serif;\n    top: 3px;\n    cursor: pointer;\n}\n.Ul .LI:hover .text{\n    font-weight: bold;\n    color: #ff2c74;\n}\nli{\n    list-style: none;\n}\n", ""]);
+exports.push([module.i, "\n.notifications{\n      background: #fff;\n      text-align: center;\n      border-radius: 5px;\n      box-sizing: border-box;            \n      height: 45px;\n      text-align: center;\n      box-shadow: 0 2px 5px rgba(0,0,0,.2);\n      padding: 2px;\n      padding-bottom: 2px;\n}\n.notifications:hover\n  {\n      width: 250px;\n      height: 50px;\n      text-align: left;\n      padding: 0 15px;\n      background: #ff2c74;\n      transform: translateY(0%);\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n}\n.notifications:hover .fa{\n      color: #fff;\n}\n.notifications .fa{\n      color: #cecece;\n      line-height: 50px;\n      font-size: 30px\n}\n.notifications .num\n  {\n      position: absolute;\n      top: 0;\n      right: 169px;\n      width: 17px;\n      height: 25px;\n      border-radius: 30%;\n      background: #ff2c74;\n      color: #fff;\n      line-height: 25px;\n      font-family: sans-serif;\n      text-align: center;\n}\n.notifications:hover .num{\n      position: static;\n      background: transparent;\n      color: #fff;\n      font-size: 24px;\n      top: -4px;\n}\n.notifications:hover .num:after{\n      content: ' Eventos';\n}\n.UL{\n      position: absolute;\n      left: 0;\n      top: 50px;\n      margin: 0;\n      width: 100%;\n      background: #fff;\n      box-shadow: 0 5px 15px rgba(0,0,0,.5);\n      padding: 20px;\n      box-sizing: border-box;\n      border-bottom-left-radius: 30px;\n      border-bottom-right-radius: 30px;\n      display: none;\n}\n.notifications:hover .UL{\n      display: block;\n}\n.UL .LI{\n      list-style: none;\n      border-bottom: 1px solid rgba(0,0,0,.1);\n      padding: 20px 0;\n      display: flex;\n}\n.UL .LI:last-child{\n      border-bottom: none;\n}\n.UL .LI .icon{\n      width: 24px;\n      height: 24px;\n      background: #ccc;\n      border-radius: 50%;\n      text-align: center;\n      line-height: 24px;   \n      margin-right: 15px;\n}\n.UL .LI .fa{\n      color: #fff;\n      font-size: 16px;\n      line-height: 24px;\n}\n.Ul .LI .text{\n      position: relative;\n      font-family: sans-serif;\n      top: 3px;\n      cursor: pointer;\n}\n.Ul .LI:hover .text{\n      font-weight: bold;\n      color: #ff2c74;\n}\nli{\n      list-style: none;\n}\na{\n      text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -61605,7 +61605,7 @@ var render = function() {
     _c("div", { staticClass: "notifications" }, [
       _c("i", { staticClass: "fa fa-bell" }),
       _vm._v(" "),
-      _c("span", { staticClass: "badge badge-pill badge-danger num" }, [
+      _c("span", { staticClass: "num" }, [
         _vm._v(_vm._s(_vm.notifications.length))
       ]),
       _vm._v(" "),
@@ -61616,27 +61616,43 @@ var render = function() {
               {},
               _vm._l(_vm.listar, function(item) {
                 return _c("li", { key: item.id }, [
-                  _c("a", { staticClass: "LI", attrs: { href: "#" } }, [
-                    _c("span", { staticClass: "icon" }, [
-                      _vm._v(" " + _vm._s(item.ingresos.numero) + " ")
-                    ]),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "text" }, [
-                      _vm._v(" Ingresos " + _vm._s(item.ingresos.mjs) + " ")
-                    ])
-                  ]),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "LI",
+                      staticStyle: { "text-decoration": "none" },
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c("span", { staticClass: "icon" }, [
+                        _vm._v(" " + _vm._s(item.ingresos.numero) + " ")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v(" Ingresos " + _vm._s(item.ingresos.mjs) + " ")
+                      ])
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("a", { staticClass: "LI", attrs: { href: "#" } }, [
-                    _c(
-                      "span",
-                      { staticClass: "icon", attrs: { syle: "color: red;" } },
-                      [_vm._v(" " + _vm._s(item.ventas.numero) + " ")]
-                    ),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "text" }, [
-                      _vm._v(" Ventas " + _vm._s(item.ventas.mjs) + " ")
-                    ])
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "LI",
+                      staticStyle: { "text-decoration": "none" },
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "icon", attrs: { syle: "color: red;" } },
+                        [_vm._v(" " + _vm._s(item.ventas.numero) + " ")]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v(" Ventas " + _vm._s(item.ventas.mjs) + " ")
+                      ])
+                    ]
+                  )
                 ])
               }),
               0
