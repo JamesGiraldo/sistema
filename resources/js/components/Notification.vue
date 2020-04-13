@@ -160,4 +160,7 @@ export default {
         font-weight: bold;
         color: #ff2c74;
     }
+    li{
+        list-style: none;
+    }
 </style>  
